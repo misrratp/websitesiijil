@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Nosotros — Laguna Adventures</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+body {
+  background-color: #FAF3E0;
+  color: #005F73;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.hero {
+  background: url('assets/nosotros.jpg') center/cover no-repeat;
+  color: #FAF3E0;
+  padding: 100px 20px;
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+}
+
+.section {
+  padding: 60px 20px;
+}
+
+.section h2 {
+  color: #005F73;
+  margin-bottom: 20px;
+}
+
+.section p {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+footer {
+  background-color: #005F73;
+  color: #FAF3E0;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #FF7E5F;
+  text-decoration: none;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-size: 30px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Header referenciado a tu styles.css -->
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><div class="logo">LA</div>Laguna Adventures</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="bacalar.html">Siijil</a>
+      <a href="servicios.html">Experiencias</a>
+      <a href="about.html">Nosotros</a>
+      <a href="reservacion.html">Reservación</a>
+     
+      <span class="idioma">
+        <a href="#" style="font-weight:700;">ESP</a> | <a href="#">ENG</a>
+      </span>
+    </nav>
+    <button id="nav-toggle" aria-label="toggle nav">☰</button>
+  </div>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  NUESTRO EQUIPO
+</div>
+
+<main>
+  <!-- Sección Introducción -->
+  <div class="section">
+    <h2>Empresa 100% mexicana</h2>
+    <p>Que tiene su origen en Felipe carrillo puerto, Quintana Roo. Nuestra misión es ofrecer experiencias únicas en la laguna de siete colores, con seguridad, diversión y profesionalismo.</p>
+  </div>
+
+  <!-- Misión -->
+  <div class="section">
+    <h2>Misión</h2>
+    <p>Ofrecemos recorridos en diferentes puntos y atractivos naturales de la laguna, para que vivas una experiencia única.</p>
+  </div>
+
+  <!-- Valores -->
+  <div class="section">
+    <h2>Valores</h2>
+    <p>Compromiso, honestidad, seguridad, respeto por el medio ambiente y atención personalizada son los principios que guían nuestro trabajo.</p>
+  </div>
+
+  <!-- Equipo -->
+  <div class="section">
+    <h2>Conoce a nuestro equipo</h2>
+    <p>Contamos con personal capacitado y apasionado por ofrecer la mejor experiencia en la laguna de Siijil.</p>
+    <div class="gallery">
+      <img src="assets/equipo1.jpg" alt="Equipo 1">
+      <img src="assets/equipo2.jpg" alt="Equipo 2">
+      <img src="assets/equipo3.jpg" alt="Equipo 3">
+    </div>
+  </div>
+
+  <!-- Galería de Experiencias -->
+  <div class="section">
+    <h2>Galería de experiencias</h2>
+    <div class="gallery">
+      <img src="assets/experiencia1.jpg" alt="Experiencia 1">
+      <img src="assets/experiencia2.jpg" alt="Experiencia 2">
+      <img src="assets/experiencia3.jpg" alt="Experiencia 3">
+    </div>
+  </div>
+
+  <!-- Llamado a la acción -->
+  <div class="section">
+    <h2>¡Vive la experiencia!</h2>
+    <p>Reserva ahora y descubre la belleza de Siijil con nuestro equipo profesional.</p>
+    <a href="reservacion.html" style="display:inline-block; background:#FF7E5F; color:#FAF3E0; padding:15px 30px; border-radius:10px; text-decoration:none; font-weight:bold;">Reservar Ahora</a>
+  </div>
+</main>
+
+<footer>
+  <p><strong>Dirección:</strong> Felipe Carrillo Puerto, Siijil</p>
+  <p><strong>Email:</strong> <a href="mailto:info@lagunaadventures.com">info@lagunaadventures.com</a></p>
+  <p><strong>Teléfonos:</strong> 983-732-93-80 | 983-752-59-85</p>
+</footer>
+
+<a href="https://wa.me/529838090970" class="whatsapp-float" target="_blank">💬</a>
+
+<script>
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+</script>
+
+</body>
+</html>
